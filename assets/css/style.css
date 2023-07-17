@@ -13,10 +13,9 @@
     --accent: #fcc15e;
     --darker: #333333;
     --dark: #5b6e7e;
-    --text-size: 1rem;
-    --title-size: 4.5rem;
-    --subtitle-size: 3rem;
     --card-title-size: 1.5rem;
+    --text-size-s: 1rem;
+    --text-size-ml: 1.125rem;
     --font-bold: 700;
     --gap-size: 1.5rem;
 }
@@ -43,7 +42,11 @@ a{
 }
 
 section{
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
+}
+
+section:nth-child(even){
+    background-color: var(--secondary);
 }
 
 /* #endregion utilities */
@@ -78,6 +81,10 @@ header a{
     padding: 0.5rem 1rem;
     border-radius: 2rem;
 }
+
+p{
+    line-height: 1.75rem;
+}
 /* #endregion header */
 
 /* #region main */
@@ -94,11 +101,14 @@ header a{
     margin-bottom: 2rem;
 }
 
+.demo:first-child h4{
+    text-align: left;
+}
+
 .demo p{
     color: var(--dark);
-    font-weight: var(--font-bold);
     text-align: center;
-    line-height: 1.75rem;
+    font-weight: var(--font-bold);
 }
 
 .demo:first-child p{
@@ -129,6 +139,54 @@ header a{
     margin-bottom: -2rem;
     display: flex;
 }
+
+.planning .col-12:first-child img{
+    width: 100%;
+    margin: 4rem 0;
+}
+
+.planning .col-12:last-child img{
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.planning p{
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.planning h3{
+    color: white;
+    font-size: 2.125rem;
+    margin-bottom: 2rem;
+}
+
+.planning-center{
+    text-align: center;
+    padding: 0 1.5rem;
+    background-color: white;
+    border-radius: 3rem;
+    margin-bottom: 4rem;
+    padding-bottom: 3rem;
+}
+
+.planning-center p{
+    color: black;
+    font-style: italic;
+    margin-bottom: 3rem;
+}
+
+.planning h4{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.plan-arrow{
+    color: black;
+    background-color: var(--secondary);
+    padding: 0.75rem 1rem;
+    border-radius: 50%;
+}
 /* #endregion main */
 
 /* #region footer */
@@ -136,6 +194,10 @@ header a{
 
 /* #region Tablet size */
 @media screen and (min-width: 768px){
+    p{
+        font-size: var(--text-size-ml);
+    }
+
     .container{
         max-width: 1140px;
     }
@@ -159,6 +221,15 @@ header a{
     .demo img{
         width: 50%;
     }
+
+    .planning .col-12:first-child img{
+        margin: 8rem 0;
+    }
+
+    .planning h3{
+        font-size: 4.5rem;
+        margin-bottom: 5rem;
+    }
 }
 /* #endregion Tablet size */
 
@@ -166,6 +237,10 @@ header a{
 @media screen and (min-width: 1200px){ 
     .flex-lg{
         display: flex;
+    }
+
+    .row-lg{
+        flex-direction: row;
     }
 
     .col-lg-4{
@@ -186,6 +261,20 @@ header a{
 
     .demo img{
         width: 40%;
+    }
+
+    .planning > div{
+        align-items: flex-end;
+        padding-bottom: 3rem;
+    }
+
+    .planning h3{
+        font-size: 2.125rem;
+    }
+
+    .planning-center{
+        height: 100%;
+        margin-bottom: 1.5rem;
     }
 }
 /* #endregion Desktop size */
