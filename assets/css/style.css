@@ -5,19 +5,14 @@
 }
 
 /* #region debug */
-.debug header{
+.debug header, .debug footer{
     height: 75px;
     background-color: aqua;
 }
 
-.debug .container{
-    background-color: azure;
-}
-
-.debug .card{
+.debug .col-12{
     background-color: blueviolet;
     height: 100px;
-    margin-bottom: 1rem;
 }
 
 /* #endregion debug */
@@ -30,36 +25,55 @@ header{
 .container{
     margin: auto;
     padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+section{
+    margin-bottom: 1rem;
 }
 
 /* #endregion utilities */
 
 /* #region Tablet size */
-@media screen and (min-width: 809px){
+@media screen and (min-width: 768px){
     .container{
         max-width: 1140px;
     }
 
-    .col-md-8{
-        width: calc(100% / 12 * 8);
-    }
-
-    .col-md-4-up{
-        width: calc(100% / 12 * 4 - 0.5rem);
+    .row-md{
+        flex-direction: row;
     }
 
     .col-md-4{
-        width: calc(100% / 12 * 4);
+        width: calc(100% / 12 * 4 - 0.67rem);
     }
 
-    .flex-md{
-        display: flex;
-        gap: 1rem;
+    .col-md-6{
+        width: calc(100% / 12 * 6 - 0.5rem);
+    }
+
+    .col-md-8{
+        width: calc(100% / 12 * 8 - 0.33rem);
     }
 }
-
 /* #endregion Tablet size */
 
 /* #region Desktop size */
+@media screen and (min-width: 1200px){    
+    .row-lg{
+        flex-direction: row;
+    }
+
+    .col-lg-4{
+        width: calc(100% / 12 * 4 - 0.67rem);
+    }
+
+    .col-lg-6{
+        width: calc(100% / 12 * 6 - 0.5rem);
+    }
+}
 /* #endregion Desktop size */
 
