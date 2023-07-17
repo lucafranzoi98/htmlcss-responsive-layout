@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* #region debug */
+.debug header{
+    height: 75px;
+    background-color: aqua;
+}
+
+.debug .col-12, .col-8, .col-4{
+    background-color: blueviolet;
+    height: 150px;
+}
+
+/* #endregion debug */
+
+/* #region utilities */
+header{
+    margin-bottom: 1rem;
+}
+
+.container{
+    margin: 0 1rem;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.col-12{
+    width: 100%;
+}
+
+[class^="col-"]{
+    padding: 1rem;
+}
+
+/* #endregion utilities */
+
+/* #region Tablet size */
+@media screen and (min-width: 809px){
+    .col-md-8{
+        width: calc(100% / 12 * 8);
+    }
+
+    .col-md-4{
+        width: calc(100% / 12 * 4);
+    }
+}
+/* #endregion Tablet size */
+
+/* #region Desktop size */
+/* #endregion Desktop size */
+
