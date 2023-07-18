@@ -17,7 +17,6 @@
     --text-size-s: 1rem;
     --text-size-ml: 1.125rem;
     --font-bold: 700;
-    --gap-size: 1.5rem;
 }
 
 header{
@@ -29,24 +28,35 @@ a{
     text-decoration: none;
 }
 
+img{
+    width: 100%;
+}
+
 .container{
     margin: auto;
     padding: 0 2rem;
 }
 
-.flex{
+.row{
     display: flex;
     flex-direction: column;
-    gap: var(--gap-size);
-    flex-wrap: wrap;
+    margin: 0 -1rem;
 }
 
 section{
     margin-bottom: 5rem;
 }
 
+.col-12{
+    width: 100%;
+}
+
 section:nth-child(even){
     background-color: var(--secondary);
+}
+
+[class^="col-"]{
+    padding: 0 1rem;
 }
 
 /* #endregion utilities */
@@ -88,10 +98,12 @@ p{
 /* #endregion header */
 
 /* #region main */
-.demo{
+
+.demo .card{
     background-color: var(--light-primary);
-    border-radius: 1.5rem;
     padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
 }
 
 .demo h4{
@@ -134,43 +146,34 @@ p{
 }
 
 .demo img{
-    width: 100%;
     margin-top: 2.5rem;
-    margin-bottom: -2rem;
+    margin-bottom: -1.5rem;
     display: flex;
-}
-
-.planning .col-12:first-child img{
-    width: 100%;
-    margin: 4rem 0;
-}
-
-.planning .col-12:last-child img{
-    width: 100%;
-    margin: 1rem 0;
-}
-
-.planning p{
-    color: white;
-    margin-bottom: 1.5rem;
 }
 
 .planning h3{
     color: white;
     font-size: 2.125rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
-.planning-center{
+.planning p{
+    color: white;
+}
+
+.planning-card{
+    margin: 3rem 0;
+}
+
+.planning .col-12:last-child .planning-card{
     text-align: center;
-    padding: 0 1.5rem;
     background-color: white;
     border-radius: 3rem;
-    margin-bottom: 4rem;
-    padding-bottom: 3rem;
+    padding: 3rem;
+    margin-top: 0;
 }
 
-.planning-center p{
+.planning .col-12:last-child .planning-card p{
     color: black;
     font-style: italic;
     margin-bottom: 3rem;
@@ -204,18 +207,23 @@ p{
 
     .row-md{
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .col-md-4{
-        width: calc(100% / 12 * 4 - (var(--gap-size) / 3 * 2));
+        width: calc(100% / 12 * 4);
+    }
+
+    .card-h100{
+        height: calc(100% - 1.5rem);
     }
 
     .col-md-6{
-        width: calc(100% / 12 * 6 - (var(--gap-size) / 2));
+        width: calc(100% / 12 * 6);
     }
 
     .col-md-8{
-        width: calc(100% / 12 * 8 - (var(--gap-size) / 3));
+        width: calc(100% / 12 * 8);
     }
 
     .demo img{
@@ -235,20 +243,12 @@ p{
 
 /* #region Desktop size */
 @media screen and (min-width: 1200px){ 
-    .flex-lg{
-        display: flex;
-    }
-
     .row-lg{
         flex-direction: row;
     }
 
     .col-lg-4{
-        width: calc(100% / 12 * 4 - (var(--gap-size) / 3 * 2));
-    }
-
-    .col-lg-6{
-        width: calc(100% / 12 * 6 - (var(--gap-size) / 2));
+        width: calc(100% / 12 * 4);
     }
 
     .menu-desktop{
@@ -263,18 +263,17 @@ p{
         width: 40%;
     }
 
-    .planning > div{
-        align-items: flex-end;
-        padding-bottom: 3rem;
+    .col-lg-6{
+        width: calc(100% / 12 * 6);
+        padding: 0 4rem;
     }
 
     .planning h3{
         font-size: 2.125rem;
     }
 
-    .planning-center{
-        height: 100%;
-        margin-bottom: 1.5rem;
+    .planning .col-12:last-child .planning-card{
+        margin-top: 23rem;
     }
 }
 /* #endregion Desktop size */
