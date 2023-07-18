@@ -59,6 +59,9 @@ section:nth-child(even){
     padding: 0 1rem;
 }
 
+.card{
+    border-radius: 2rem;
+}
 /* #endregion utilities */
 
 /* #region header */
@@ -102,7 +105,6 @@ p{
 .demo .card{
     background-color: var(--light-primary);
     padding: 2rem;
-    border-radius: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -161,19 +163,18 @@ p{
     color: white;
 }
 
-.planning-card{
+.planning .card{
     margin: 3rem 0;
 }
 
-.planning .col-12:last-child .planning-card{
+.planning .col-12:last-child .card{
     text-align: center;
     background-color: white;
-    border-radius: 3rem;
     padding: 3rem;
     margin-top: 0;
 }
 
-.planning .col-12:last-child .planning-card p{
+.planning .col-12:last-child .card p{
     color: black;
     font-style: italic;
     margin-bottom: 3rem;
@@ -190,6 +191,58 @@ p{
     padding: 0.75rem 1rem;
     border-radius: 50%;
 }
+
+.partner{
+    text-align: center;
+}
+
+.partner h5{
+    text-transform: uppercase;
+    font-size: 1.1875rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+}
+
+.partner h3{
+    font-size: 2.125rem;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+}
+
+.partner .col-12:first-child p{
+    margin-bottom: 2rem;
+}
+
+.partner .card{
+    background-color: var(--secondary);
+    padding: 2rem;
+    color: white;
+}
+
+.partner img{
+    height: 200px;
+    width: auto;
+    clip-path: circle();
+}
+
+.fa-quote-left{
+    font-size: 1.5rem;
+    padding-right: 0.25rem;
+}
+
+.fa-quote-right{
+    font-size: 1.5rem;
+    padding-left: 0.25rem;
+}
+
+.partner-name{
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-weight: var(--font-bold);
+    font-size: 20px;
+    letter-spacing: 0.2rem;
+}
+
 /* #endregion main */
 
 /* #region footer */
@@ -238,6 +291,7 @@ p{
         font-size: 4.5rem;
         margin-bottom: 5rem;
     }
+
 }
 /* #endregion Tablet size */
 
@@ -272,7 +326,7 @@ p{
         font-size: 2.125rem;
     }
 
-    .planning .col-12:last-child .planning-card{
+    .planning .col-12:last-child .card{
         margin-top: 23rem;
     }
 }
