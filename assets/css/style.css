@@ -225,17 +225,18 @@ p{
 }
 
 .testimonial img{
-    height: 200px;
+    max-height: 200px;
     width: auto;
     clip-path: circle();
+    max-width: 100%;
 }
 
-.fa-quote-left{
+.testimonials .fa-quote-left{
     font-size: 1.5rem;
     padding-right: 0.25rem;
 }
 
-.fa-quote-right{
+.testimonials .fa-quote-right{
     font-size: 1.5rem;
     padding-left: 0.25rem;
 }
@@ -246,6 +247,95 @@ p{
     font-weight: var(--font-bold);
     font-size: 20px;
     letter-spacing: 0.2rem;
+}
+
+.beneficts{
+    padding-bottom: 2rem;
+}
+
+.beneficts h3{
+    font-size: 2.125rem;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.beneficts .card{
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1.5rem;
+}
+
+.beneficts-number{
+    color: var(--secondary);
+    font-size: 3.25rem;
+    font-weight: var(--font-bold);
+    margin-bottom: 1.5rem;
+}
+
+.beneficts h4{
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+}
+
+.beneficts p{
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+}
+
+.btn-beneficts{
+    color: white;
+    background-color: var(--secondary);
+    padding: 0.5rem 2.5rem;
+    border-radius: 2rem;
+    font-weight: var(--font-bold);
+    letter-spacing: 0.2rem;
+}
+
+.about h2{
+    font-size: 3rem;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+}
+
+.about p{
+    margin-bottom: 2rem;
+}
+
+.about img{
+    clip-path: circle();
+    width: 180px;
+    margin-bottom: 2rem;
+}
+
+.about .fa-quote-left{
+    margin-left: -2rem;
+    z-index: 1;
+    color: var(--secondary);
+    font-size: 4rem;
+}
+
+.flex{
+    display: flex;
+}
+
+.about h3{
+    font-size: 2.125rem;
+    color: var(--secondary);
+    margin-bottom: 2.5rem;
+}
+
+.about a{
+    color: white;
+    background-color: var(--secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
+
+.about .fa-linkedin-square{
+    margin-right: 0.5rem;
 }
 
 /* #endregion main */
@@ -317,6 +407,11 @@ p{
 
     .testimonial img{
         transform: translateX(calc(0px - 1rem - ((100% - 200px) / 2)));
+        max-width: none;
+    }
+
+    .beneficts-number{
+        font-size: 4.875rem;
     }
 }
 /* #endregion Tablet size */
