@@ -192,34 +192,39 @@ p{
     border-radius: 50%;
 }
 
-.partner{
+.testimonial{
     text-align: center;
 }
 
-.partner h5{
+.testimonial h5{
     text-transform: uppercase;
     font-size: 1.1875rem;
     font-weight: normal;
     margin-bottom: 2rem;
 }
 
-.partner h3{
+.testimonial h3{
     font-size: 2.125rem;
     color: var(--secondary);
     margin-bottom: 2rem;
 }
 
-.partner .col-12:first-child p{
+.testimonial .col-12:first-child{
     margin-bottom: 2rem;
 }
 
-.partner .card{
+.testimonial .card{
     background-color: var(--secondary);
     padding: 2rem;
     color: white;
+    margin-bottom: 2rem;
 }
 
-.partner img{
+.testimonial .col-12 .row{
+    margin: 1rem 0;
+}
+
+.testimonial img{
     height: 200px;
     width: auto;
     clip-path: circle();
@@ -235,7 +240,7 @@ p{
     padding-left: 0.25rem;
 }
 
-.partner-name{
+.testimonial-name{
     text-transform: uppercase;
     margin-top: 1rem;
     font-weight: var(--font-bold);
@@ -292,6 +297,27 @@ p{
         margin-bottom: 5rem;
     }
 
+    .col-md-200{
+        width: 200px;
+    }
+
+    .testimonial .row-md{
+        align-items: center;
+    }
+
+    .col-md-quote{
+        width: calc(100% - 200px);
+        text-align: left;
+        padding-left: 2rem;
+    }
+
+    .col-md-quote p{
+        line-height: 2rem;
+    }
+
+    .testimonial img{
+        transform: translateX(calc(0px - 1rem - ((100% - 200px) / 2)));
+    }
 }
 /* #endregion Tablet size */
 
