@@ -47,6 +47,10 @@ section{
     margin-bottom: 5rem;
 }
 
+section:last-child{
+    margin-bottom: 0;
+}
+
 .col-12{
     width: 100%;
 }
@@ -317,10 +321,6 @@ p{
     font-size: 4rem;
 }
 
-.flex{
-    display: flex;
-}
-
 .about h3{
     font-size: 2.125rem;
     color: var(--secondary);
@@ -338,9 +338,74 @@ p{
     margin-right: 0.5rem;
 }
 
+.free{
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.free h5{
+    text-transform: uppercase;
+    font-size: 1.1875rem;
+    font-weight: normal;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.free h3{
+    font-size: 2.125rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.free h2{
+    color: var(--accent);
+    font-size: 3.75rem;
+    margin-bottom: 2rem;
+}
+
+.free p{
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.start-button{
+    color: var(--secondary);
+    font-weight: var(--font-bold);
+    background-color: white;
+    padding: 1rem 4rem;
+    border-radius: 2rem;
+}
+
+.privacy{
+    margin-top: 3rem;
+    font-size: 14px;
+    color: white;
+}
+
+.privacy a{
+    color: white;
+    text-decoration: underline;
+}
+
 /* #endregion main */
 
 /* #region footer */
+footer{
+    background-color: var(--darker);
+    padding: 3rem 0;
+    text-align: center;
+    color: white;
+}
+
+footer p{
+    margin-bottom: 4rem;
+}
+
+footer a{
+    color: var(--secondary);
+    text-decoration: underline;
+}
 /* #endregion footer */
 
 /* #region Tablet size */
@@ -412,6 +477,14 @@ p{
 
     .beneficts-number{
         font-size: 4.875rem;
+    }
+
+    .free h3{
+        font-size: 50px;
+    }
+
+    .free h2{
+        font-size: 100px;
     }
 }
 /* #endregion Tablet size */
