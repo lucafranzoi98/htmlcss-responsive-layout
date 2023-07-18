@@ -14,22 +14,14 @@
     --darker: #333333;
     --dark: #5b6e7e;
     --card-title-size: 1.5rem;
-    --text-size-s: 1rem;
     --text-size-ml: 1.125rem;
+    --section-title-size-s: 2.25rem;
     --font-bold: 700;
 }
 
 header{
     margin-bottom: 3rem;
     background-color: var(--primary);
-}
-
-a{
-    text-decoration: none;
-}
-
-img{
-    width: 100%;
 }
 
 .container{
@@ -43,28 +35,48 @@ img{
     margin: 0 -1rem;
 }
 
-section{
-    margin-bottom: 5rem;
-}
-
-section:last-child{
-    margin-bottom: 0;
-}
-
 .col-12{
     width: 100%;
-}
-
-section:nth-child(even){
-    background-color: var(--secondary);
 }
 
 [class^="col-"]{
     padding: 0 1rem;
 }
 
+a{
+    text-decoration: none;
+}
+
+p{
+    line-height: 1.75rem;
+}
+
+img{
+    width: 100%;
+}
+
+section{
+    margin-bottom: 4rem;
+}
+
+section:last-child{
+    margin-bottom: 0;
+}
+
+section:nth-child(even){
+    background-color: var(--secondary);
+}
+
 .card{
     border-radius: 2rem;
+}
+
+h3{
+    font-size: var(--section-title-size-s);
+}
+
+h4{
+    font-size: var(--card-title-size);
 }
 /* #endregion utilities */
 
@@ -98,28 +110,23 @@ header a{
     padding: 0.5rem 1rem;
     border-radius: 2rem;
 }
-
-p{
-    line-height: 1.75rem;
-}
 /* #endregion header */
 
 /* #region main */
 
 .demo .card{
     background-color: var(--light-primary);
-    padding: 2rem;
-    margin-bottom: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .demo h4{
     color: var(--primary);
     text-align: center;
-    font-size: var(--card-title-size);
     margin-bottom: 2rem;
 }
 
-.demo:first-child h4{
+.demo .col-12:first-child h4{
     text-align: left;
 }
 
@@ -129,7 +136,7 @@ p{
     font-weight: var(--font-bold);
 }
 
-.demo:first-child p{
+.demo .col-12:first-child p{
     text-align: left;
     margin-bottom: 2.5rem;
 }
@@ -153,13 +160,12 @@ p{
 
 .demo img{
     margin-top: 2.5rem;
-    margin-bottom: -1.5rem;
+    margin-bottom: -2rem;
     display: flex;
 }
 
 .planning h3{
     color: white;
-    font-size: 2.125rem;
     margin: 2rem 0;
 }
 
@@ -174,18 +180,19 @@ p{
 .planning .col-12:last-child .card{
     text-align: center;
     background-color: white;
-    padding: 3rem;
+    padding: 2rem 1rem 3rem;
     margin-top: 0;
+    margin-bottom: 5rem;
 }
 
 .planning .col-12:last-child .card p{
     color: black;
     font-style: italic;
     margin-bottom: 3rem;
+    font-size: 1.125rem;
 }
 
 .planning h4{
-    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
@@ -208,7 +215,6 @@ p{
 }
 
 .testimonial h3{
-    font-size: 2.125rem;
     color: var(--secondary);
     margin-bottom: 2rem;
 }
@@ -258,7 +264,6 @@ p{
 }
 
 .beneficts h3{
-    font-size: 2.125rem;
     color: white;
     padding: 4rem 0;
     text-align: center;
@@ -279,7 +284,6 @@ p{
 }
 
 .beneficts h4{
-    font-size: 1.5rem;
     color: var(--secondary);
     margin-bottom: 1.5rem;
 }
@@ -321,10 +325,14 @@ p{
     font-size: 4rem;
 }
 
+.flex{
+    display: flex;
+}
+
 .about h3{
-    font-size: 2.125rem;
     color: var(--secondary);
     margin-bottom: 2.5rem;
+    font-size: 30px;
 }
 
 .about a{
@@ -348,11 +356,10 @@ p{
     font-size: 1.1875rem;
     font-weight: normal;
     color: white;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .free h3{
-    font-size: 2.125rem;
     color: white;
     text-align: center;
     margin-bottom: 2rem;
@@ -375,6 +382,7 @@ p{
     background-color: white;
     padding: 1rem 4rem;
     border-radius: 2rem;
+    letter-spacing: 0.25rem;
 }
 
 .privacy{
@@ -444,12 +452,12 @@ footer a{
     }
 
     .planning .col-12:first-child img{
-        margin: 8rem 0;
+        margin: 6rem 0 4rem;
     }
 
     .planning h3{
         font-size: 4.5rem;
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
     }
 
     .col-md-200{
@@ -458,6 +466,10 @@ footer a{
 
     .testimonial .row-md{
         align-items: center;
+    }
+
+    .testimonial h3, .beneficts h3{
+        font-size: 2.625rem;
     }
 
     .col-md-quote{
@@ -479,12 +491,43 @@ footer a{
         font-size: 4.875rem;
     }
 
+    .about h2{
+        font-size: 4.5rem;
+    }
+
+    .about img{
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .about .fa-quote-left{
+        margin-left: -3.5rem;
+    }
+
     .free h3{
         font-size: 50px;
     }
 
     .free h2{
         font-size: 100px;
+    }
+
+    .free p{
+        margin-bottom: 4rem;
+    }
+
+    .start-button{
+        font-size: 1.125rem;
+        padding: 2rem 5rem;
+        border-radius: 4rem;
+    }
+
+    .privacy{
+        padding-top: 2rem;
+    }
+
+    footer .container{
+        max-width: 500px;
     }
 }
 /* #endregion Tablet size */
@@ -521,7 +564,11 @@ footer a{
     }
 
     .planning .col-12:last-child .card{
-        margin-top: 23rem;
+        margin-top: 10rem;
+    }
+
+    .free .container{
+        max-width: 800px;
     }
 }
 /* #endregion Desktop size */
