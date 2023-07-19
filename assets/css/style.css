@@ -325,10 +325,6 @@ header a{
     font-size: 4rem;
 }
 
-.flex{
-    display: flex;
-}
-
 .about h3{
     color: var(--secondary);
     margin-bottom: 2.5rem;
@@ -557,6 +553,10 @@ footer a{
     .col-lg-6{
         width: calc(100% / 12 * 6);
         padding: 0 4rem;
+    }
+
+    .flex-lg{
+        display: flex;
     }
 
     .planning h3{
